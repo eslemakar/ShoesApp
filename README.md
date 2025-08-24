@@ -1,5 +1,4 @@
-Hub, Inc. readme yi düzenle
-© 2025 GitHub, Inc.
+
 # 👟 Modern Ayakkabı E-Ticaret Platformu
 
 React, TypeScript ve Tailwind CSS kullanılarak geliştirilmiş **full-stack e-ticaret uygulaması**.  
@@ -60,6 +59,9 @@ npm run dev
 --
 3. Build al
 npm run build
+
+--
+--ARAÇLAR
 --
 🔧 Geliştirme Araçları
 ✅ ESLint - Code quality
@@ -72,16 +74,19 @@ npm run build
 📊 Dashboard (Admin) – Yönetim paneli
 ✏️ Ürün CRUD – Ekleme, düzenleme, silme
 🔐 Auth – Giriş & Kayıt sayfaları
+--
 🎨 Tasarım
 Responsive grid layout
 Smooth animations
 Consistent spacing
 Accessible color scheme
+--
 🔐 Güvenlik
 JWT token authentication
 Protected routes
 Input validation (Formik + Yup)
 XSS protection
+--
 📊 Performans
 React Query ile caching
 Lazy loading
