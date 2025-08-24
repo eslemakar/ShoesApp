@@ -11,11 +11,13 @@ const shoeRoutes = require("./routes/shoe.routes");
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: "http://localhost:5178",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+app.use(
+  cors({
+    // allow both 5173 and 5174
+    origin: [ "http://localhost:5178"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 
@@ -35,5 +37,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: "Something went wrong!" });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(5000, () => console.log("Server is running on port 5000"));
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

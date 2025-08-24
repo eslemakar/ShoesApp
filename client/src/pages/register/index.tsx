@@ -5,9 +5,12 @@ import type { RegisterValues } from "../../types";
 import { initialRegisterValues } from "../../utils/constants";
 import Input from "../../components/form/input";
 import { registerSchema } from "../../utils/schemas";
+import useAuth from "../../hooks/useAuth";
 const Register: FC = () => {
+  const {register} = useAuth()
+
   const onSubmit = (values: RegisterValues) => {
-    console.log(values);
+    register.mutate(values);
   };
 
   return (
@@ -27,6 +30,7 @@ const Register: FC = () => {
                                             
             <div>
               <button
+              disabled={register.isPending}
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
