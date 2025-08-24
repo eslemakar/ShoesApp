@@ -54,14 +54,18 @@ client/
 ### 1. Bağımlılıkları yükle
 ```bash
 npm install
+--
 2. Development server başlat
 npm run dev
+--
 3. Build al
 npm run build
+--
 🔧 Geliştirme Araçları
 ✅ ESLint - Code quality
 🎨 Prettier - Code formatting
 ⚡ Vite - Build tool
+--
 📱 Sayfalar
 🏠 Ana Sayfa – Hero section + ürün listesi
 👟 Ürün Detay – Boyut, renk seçimi, açıklama
